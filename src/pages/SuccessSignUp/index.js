@@ -1,12 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {ILSuccessSignUp} from '../../assets';
+import {IlSuccessSignUp} from '../../assets';
 import {Button, Gap} from '../../components';
 
 const SuccessSignUp = ({navigation}) => {
   return (
     <View style={styles.page}>
-      <ILSuccessSignUp />
+      <IlSuccessSignUp />
       <Gap height={30} />
       <Text style={styles.title}>Yeay! Completed</Text>
       <Gap height={6} />
@@ -15,7 +15,10 @@ const SuccessSignUp = ({navigation}) => {
       </Text>
       <Gap height={30} />
       <View style={styles.buttonContainer}>
-        <Button text="Find Foods" />
+        <Button
+          text="Find Foods"
+          onPress={() => navigation.replace('MainApp')}
+        />
       </View>
     </View>
   );
